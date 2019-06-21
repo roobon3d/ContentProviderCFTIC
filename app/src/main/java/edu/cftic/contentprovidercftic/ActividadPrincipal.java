@@ -21,7 +21,7 @@ public class ActividadPrincipal extends AppCompatActivity {
 
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
     {
-        startActivity(new Intent(this, ListarContactosActivity.class));
-        //startActivity(new Intent(this, SeleccionContactoActivity.class));
+        //startActivity(new Intent(this, ListarContactosActivity.class));
+      startActivity(new Intent(this, SeleccionContactoActivity.class));
     }
 }

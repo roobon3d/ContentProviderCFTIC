@@ -25,12 +25,12 @@ public class ListarContactosActivity extends AppCompatActivity {
         ContentResolver contentResolver = getContentResolver();
         Uri uri_contactos = ContactsContract.Contacts.CONTENT_URI;////content://com.android.contacts/contacts
 
-        //String[] prefijo = {"M%"};
+        String[] prefijo = {"J%"};
         //Cursor cursor_contactos = contentResolver.query(uri_contactos, null, null, null, null); //Selecciono todas las columnas, de todos
         //Cursor cursor_contactos = contentResolver.query(uri_contactos, null, null, null, ContactsContract.Contacts.DISPLAY_NAME +" ASC"); //Selecciono todas las columnas, de todos
         // Cursor cursor_contactos = contentResolver.query(uri_contactos, null, ContactsContract.Contacts.HAS_PHONE_NUMBER +" = 1" ,null, null); //Selecciono todas las columnas, de todos
-        // Cursor cursor_contactos = contentResolver.query(uri_contactos, null, ContactsContract.Contacts.DISPLAY_NAME +" LIKE ?" ,prefijo, null); //Selecciono todas las columnas, de todos
-        Cursor cursor_contactos = contentResolver.query(uri_contactos, null, ContactsContract.Contacts.DISPLAY_NAME + " = 'Alberto Vivas'", null, null); //Selecciono todas las columnas, de todos
+         Cursor cursor_contactos = contentResolver.query(uri_contactos, null, ContactsContract.Contacts.DISPLAY_NAME +" LIKE ?" ,prefijo, null); //Selecciono todas las columnas, de todos
+        //Cursor cursor_contactos = contentResolver.query(uri_contactos, null, ContactsContract.Contacts.DISPLAY_NAME + " = 'Evutxa'", null, null); //Selecciono todas las columnas, de todos
 
         Cursor cursor_raw = null;
 
@@ -89,6 +89,7 @@ public class ListarContactosActivity extends AppCompatActivity {
         }
         cursor_contactos.close();
 
+        //Selección de todos los telefonos
 
         Cursor phones = getContentResolver().query(Phone.CONTENT_URI, null, null, null, null);
 

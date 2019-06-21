@@ -35,7 +35,7 @@ public class SeleccionContactoActivity extends AppCompatActivity {
                 int  phoneIndex =cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
                 phoneNo = cursor.getString(phoneIndex);
 
-                Log.d("MIAPP", "NUMERO SELECCIOANDO = " +phoneNo);
+                Log.d("MIAPP", "NUMERO SELECCIONADO = " +phoneNo);
             } catch (Exception e) {
                         e.printStackTrace();
             }
